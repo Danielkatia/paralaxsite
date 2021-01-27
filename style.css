@@ -1,0 +1,302 @@
+body ,html{
+    height: 100%;
+    margin: 0;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: rgb(5, 5, 94);
+}
+header{
+    border-top:  blue 4px double;
+    border-radius: 50px;
+    background: rgb(125, 233, 101);
+    color: cornsilk;
+    width: 100%;
+    padding-top: 10px;
+    min-height: 50px;
+    border-bottom: crimson 4px dotted;
+    padding-bottom: 40px;
+}
+header #branding{
+    float: left;
+}
+.menu-bar{
+	background: rgb(125, 233, 101);
+	text-align: center;
+}
+.menu-bar ul{
+	display: flex;
+	list-style: none;
+    color: silver;
+    transition: all 0.3ms ease-in-out;
+}
+.menu-bar ul li{
+	width: 150px;
+	margin: 10px;
+    padding: 10px;
+    font:20px/1.5 Arial, Helvetica, sans-serif;
+}
+.menu-bar ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.active,.menu-bar ul li:hover{
+	background: deepskyblue;
+	border-radius: 6px;
+}
+.menu-bar .fa{
+	margin-right: 2px;
+}
+.menu1{
+	display: none;
+}
+.menu2{
+    display: none;
+}
+.menu-bar ul li:hover .menu1{
+    border-radius: 14px;
+	display: block;
+	position: absolute;
+    background: rgb(0, 100, 0);
+    color: #fff;
+	margin-top: 15px;
+	scroll-margin-left: -15px;
+}
+.menu-bar ul li:hover .menu1{
+    border-radius: 14px;
+    display:block;
+    justify-content: center;
+    position: absolute;
+    float: right;
+	background: rgb(223, 109, 198);
+	margin-top: 15px;
+	scroll-margin-left: -15px;
+}
+.menu-bar ul li:hover .menu1 ul{
+	display: inline-flexbox;
+	margin: 10px;
+}
+.menu-bar ul li:hover .menu1 ul li{
+	width: 120px;
+	padding: 10px;
+	background: transparent;
+	text-align: center;
+}
+.menu-bar ul li:hover .menu1 ul li a:hover{
+	color: aqua;
+}
+/*@media  queries*/
+@media (max-width:900px){
+    .menu-bar ul{
+        display: inline-block;
+        transition: all 0.2ms ease-in-out;
+    }
+    .menu-bar ul li{
+        display: inline-flex;
+    }
+}
+@media (max-width:720px){
+    .menu-bar ul{
+        justify-content: center;
+        display:block;
+        height: 100vh;
+        width: 150px;
+    }
+    .menu-bar ul li{
+        align-items: center;
+        justify-content: center;
+        display: block;
+        margin: 1rem;
+        transition: all 0.2ms ease-in-out;
+    }
+    .menu-bar ul li:hover .menu1{
+        border-radius: 10px;
+        height: 50vh;
+        display: inline-block;
+        position: absolute;
+        background: rgb(56, 4, 26);
+        margin-top: 10px;
+        scroll-margin-left: -15px;
+    }
+    .menu-bar ul li:hover .menu2{
+        border-radius: 10px;
+        height: 100vh;
+        display:inline-flex;
+        position: absolute;
+        background: rgb(56, 4, 26);
+        margin-top: 10px;
+        scroll-margin-left: -15px;
+    }
+    .menu-bar ul li:hover .menu1 ul li{
+        width: 120px;
+        padding: 7px;
+        border-bottom:none
+    }
+      
+}
+header nav .menu-bar{
+    align-content: center;
+    margin-top: 10px;
+}
+header a:hover{
+    color: #630f39;
+    font-weight: bolder;
+}
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    margin-top: 15px;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    background: transparent;
+    border-radius: 50px;
+    width: 20%;
+    float: left;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -400%;
+    }
+    98%{
+        left: -400%;
+    }
+    100%{
+        left: -500%;
+    }
+}
+.pimg1,.pimg2,.pimg3,.pimg4{
+    position: relative;
+    opacity: 0.80;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.pimg1{
+    background-image: url('./images/1.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.pimg2{
+    background-image: url('./images/2.jpg');
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+.pimg3{
+    background-image: url('./images/3.jpg');
+    min-height:500px;
+    background-position: center;
+    background-size: cover;
+}
+.pimg4{
+    background-image: url('./images/4.jpg');
+    min-height:500px;
+    background-position: center;
+    background-size: cover;
+}
+.section{
+    border: 10px solid red;
+    border-radius: 40px;
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-light{
+    background-color: #ff44ff;
+    color: #666;
+}
+.section-dark{
+    background-color: #f3f44f;
+    color: #090542;
+}
+.section-green{
+    background-color: #36d836;
+    color: #111;
+}
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.ptext .border{
+    border: 10px solid green;
+    border-radius: 20px;
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+.ftco-heading-2{
+    text-align: center;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 21px;
+    font-weight: bold;
+    color: lawngreen;
+}
+.subscribe-form{
+    align-content: center;
+    background-color: lightseagreen;
+    color: lightyellow;
+    min-height: 100px;
+    text-align: center;
+    margin: auto;
+    padding: 40px 60px;
+}
+.form-group{
+    margin-top: 20px;
+    padding: 30px 40px;
+    width: 100%;
+    margin-left: 10px;
+}
+.form-control{
+    margin-left: 10px;
+    width: 600px;
+    height: 40px;
+}
+.submit{
+    background-color: rgb(228, 30, 40);
+    color: linen;
+    border-radius: 20px;
+}
+.text-center{
+    background-color: lightgreen;
+    color: midnightblue;
+    border-radius: 20px;
+    text-align: center;
+}
+p{
+    text-align: center;
+    color: indigo;
+}
